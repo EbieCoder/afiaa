@@ -39,21 +39,29 @@
       text-align: center;
     }
 
+    /* Frameless Floating Logo: 200px with aspect-ratio protection */
     .avatar-wrapper {
-      width: 84px;
-      height: 84px;
-      margin: 0 auto 16px;
-      border-radius: 50%;
-      background: #e2ede5;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--primary);
-      box-shadow: var(--shadow);
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    .avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Prevents stretching or squishing */
+      display: block;
     }
 
     h1 {
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       font-weight: 700;
       color: var(--primary);
       margin-bottom: 4px;
@@ -124,13 +132,9 @@
 <body>
 
   <div class="container">
+    <!-- Floating Frameless Logo -->
     <div class="avatar-wrapper">
-      <svg class="icon" style="width: 40px; height: 40px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12A10 10 0 0 1 12 2Z"/>
-        <path d="M12 6v12"/>
-        <path d="M8 10c2-2 4-2 4 2"/>
-        <path d="M16 14c-2 2-4 2-4-2"/>
-      </svg>
+      <img src="logo.jpg" alt="Afiaa Succulents Logo">
     </div>
 
     <h1>Afiaa Succulents</h1>
@@ -157,7 +161,7 @@
         Follow on Instagram
       </a>
 
-      <!-- 3. Facebook -->
+      <!-- 3. Facebook Direct Profile -->
       <a href="https://www.facebook.com/profile.php?id=61587484667480" class="btn btn-social" target="_blank" rel="noopener noreferrer">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#1877F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
